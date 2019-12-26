@@ -105,7 +105,9 @@ Install Intel microcode (use AMD microcode if you have that cpu, modify the efi 
 
 Create the efi entry:
 
-TODO
+efibootmgr --disk /dev/nvme0n1 --part 1 --create --label Arch Linux --loader /vmlinuz-linux --unicode 'root=/dev/mapper/vg0-root rw quiet vga=current resume=/dev/mapper/vg0-swap initrd=/intel-ucode.img initrd=/initramfs-linux.img' --verbose
+
+sudo efibootmgr --disk /dev/nvme0n1 --part 1 --create --label Arch Linux --loader /vmlinuz-linux --unicode 'root=/dev/mapper/vg0-root rootflags=rw,noatime quiet vga=current resume=/dev/mapper/vg0-swap initrd=/intel-ucode.img initrd=/initramfs-linux.img' --verbose
 
 You are now in a booteable system
 
