@@ -109,24 +109,9 @@ efibootmgr --disk /dev/nvme0n1 --part 1 --create --label Arch Linux --loader /vm
 
 efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "Arch Linux" --loader /vmlinuz-linux --unicode 'root=/dev/mapper/vg0-root rootflags=rw,noatime quiet vga=current nowatchdog resume=/dev/mapper/vg0-swap initrd=/intel-ucode.img initrd=/initramfs-linux.img' --verbose
 
+Blacklist the watchdog timer module
+
+/etc/modprobe.d/blacklist.conf
+blacklist iTCO_wdt
+
 You are now in a booteable system
-
-Install zsh:
-
-# pacman -S zsh
-
-Create a user:
-
-useradd -m -s /bin/zsh user
-
-Add user in sudoers with visudo
-
-Install Xorg
-
-# pacman -S xorg-server xorg-xinit
-
-Install bspwm, sxhkd and kitty
-
-# pacman -S bspwm sxhkd kitty
-
-TODO: .zprofile y xinitrc
