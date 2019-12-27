@@ -1,0 +1,9 @@
+Install zsh if you didn't already:
+`# pacman -S zsh`
+
+Install Zplugin:
+
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"`
+
+Clone .zshrc
+
