@@ -114,4 +114,15 @@ Blacklist the watchdog timer module
 /etc/modprobe.d/blacklist.conf
 blacklist iTCO_wdt
 
-You are now in a booteable system
+You are now in a bootable system
+
+
+Install zsh:
+
+# pacman -S zsh
+
+Create a user:
+
+useradd -m -s /bin/zsh user
+
+Add user in sudoers with visudo
