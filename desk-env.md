@@ -1,10 +1,12 @@
 Install Xorg
 
-# pacman -S xorg-server xorg-xinit
+`# pacman -S xorg-server xorg-xinit`
 
-Install bspwm, sxhkd and kitty
+Install bspwm, sxhkd, kitty, rofi, picom
 
-# pacman -S bspwm sxhkd kitty
+`# pacman -S bspwm sxhkd kitty rofi picom`
 
-TODO: .zprofile y xinitrc
+Install i3lock-color and polybar
+
+`# yay -S polybar-git i3lock-color-git`
 
